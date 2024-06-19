@@ -34,11 +34,11 @@ const style = {
     </div>
   </aside> -->
   <aside
-    class="scrollbar top-0 h-screen overflow-y-auto bg-gray-900 text-white lg:relative lg:z-40 lg:block"
+    class="scrollbar top-0 h-screen bg-gray-900 text-white lg:relative lg:z-40 lg:block"
     :class="[
       style.mobileOrientation[mobileOrientation],
       sidebarOpen
-        ? 'relative z-40 w-8/12 sm:w-5/12 md:w-64 transition-all duration-500 ease-in'
+        ? 'relative z-40 w-8/12 sm:w-5/12 md:w-64 transition-all duration-500 ease-in overflow-y-auto'
         : 'hidden transition-all duration-700 ease-out lg:w-24',
     ]"
   >

@@ -94,13 +94,13 @@ const closeOtherSubMenus = (currentSubMenu, currentMenu) => {
       </button>
     </li>
     <!-- Parent Menu -->
-    <li v-for="(item, index) in menulist" :key="index">
+    <li v-for="(item, index) in menulist" :key="index" class="relative">
       <button
         @click="toggleDropdown(item)"
         class="my-2 flex w-full items-center text-blue-50 justify-between p-4 font-thin uppercase transition-colors duration-200 lg:hover:text-blue-500"
         :class="
           item.isopen &&
-          'bg-gradient-to-r border-r-4 border-blue-500 from-blue-800 to-blue-100'
+          ''
         "
       >
         <div class="flex">
@@ -142,11 +142,11 @@ const closeOtherSubMenus = (currentSubMenu, currentMenu) => {
           </svg>
         </span>
       </button>
-      <ul class="ml-8" :class="{ hidden: !item.isopen }">
+      <ul class="ml-8" :class="{ hidden: !item.isopen }, {'absolute w-52 -right-52 top-0 bg-blue-950': !sidebarOpen}">
         <!-- Sub Menu -->
         <li v-for="(sub, index) in item.submenu" :key="index">
           <button
-            @click="SubOnClick(sub, item)"
+            @click="SubOnClick(sub, item); toggleDropdown(item)"
             class="my-2 flex w-full items-center text-blue-50 justify-start p-4 font-thin uppercase transition-colors duration-200 lg:hover:text-blue-500"
             :class="
               sub.isclick &&
