@@ -4,7 +4,7 @@ import Layout from "~/dashboard/Layout.vue";
 
 <template>
   <Head>
-    <title>iCheck</title>
+    <title>Dorm Booking App</title>
   </Head>
   <Layout>
     <slot />

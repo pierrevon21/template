@@ -1,15 +1,15 @@
 <template>
+  <div>
     <div>
-        Sample Dashboard
+      <label class="font-bold text-4xl">Dorm Booking</label>
     </div>
+  </div>
 </template>
 
 <script setup>
 definePageMeta({
-    alias: ["/", "/main"],    
-})
+  alias: ["/", "/main"],
+});
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style scoped></style>
